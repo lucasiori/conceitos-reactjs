@@ -64,6 +64,10 @@
   </ul>
 </p>
 
+<p>
+  <strong>OBS: </strong> Certifique-se de estar com o servidor back-end em execução.
+</p>
+
 <br />
 
 <h2 id="preview-aplicacao">👀 Preview da aplicação</h2>
