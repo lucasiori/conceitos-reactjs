@@ -1,39 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  outline: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-size: 14px;
+body, input, button {
+  font: 14px 'Roboto', sans-serif;
+  background: rgba(113, 89, 193, 0.5);
+  -webkit-font-smoothing: antialiased;
 }
 
-div {
-  width: 100%;
-  margin: 20px;
+.container {
+  width: 90%;
+  max-width: 1240px;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+div ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -15px 30px;
 }
 
 div li {
   display: flex;
-  align-items: center;
+  flex-basis: 300px;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px 10px;
+  margin: 15px 15px 0;
 }
 
-div li + li {
+div li h4 {
+  width: 100%;
+  border-left: 10px solid #7159c1;
+  color: #222;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+div li .techs-title {
+  color: #909090;
   margin-top: 15px;
+}
+
+div li .techs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+}
+
+.techs span {
+  background: #7159c1;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 3px 15px;
+  margin: 10px 0 0 10px;
 }
 
 button {
-  background: #7159c1;
+  display: block;
   color: #fff;
-  border: 0;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin-top: 15px;
   font-weight: bold;
-  font-size: 14px;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+button:hover {
+  transform: scale(0.95);
+}
+
+button.add-button {
+  background: #7159c1;
+  font-size: 18px;
+  margin: auto auto 30px;
 }
 
 div li button {
-  margin: 0 15px;
+  width: 100%;
+  margin: 35px auto 0;
   background: #ca4949;
 }

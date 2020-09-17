@@ -17,9 +17,9 @@ function App() {
 
   async function handleAddRepository() {
     const response = await api.post('repositories', {
-      title: 'Umbriel',
-      url: 'https://github.com/Rocketseat/umbriel',
-      techs: ['Node', 'Express', 'TypeScript']
+      title: 'Unform',
+      url: 'https://github.com/Rocketseat/unform',
+      techs: ['React', 'Form', 'Forms', 'React Native']
     });
 
     const repository = response.data;
@@ -37,11 +37,16 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="container">
       <ul data-testid="repository-list">
         {repositories.map((repository) => (
           <li key={repository.id}>
-            {repository.title}
+            <h4>{repository.title}</h4>
+
+            <span className="techs-title">Techs</span>
+            <div className="techs">
+              {repository.techs.map((tech) => <span key={tech}>{tech}</span>)}
+            </div>
 
             <button onClick={() => handleRemoveRepository(repository.id)}>
               Remover
@@ -50,7 +55,7 @@ function App() {
         ))}
       </ul>
 
-      <button onClick={handleAddRepository}>Adicionar</button>
+      <button onClick={handleAddRepository} className="add-button">Adicionar</button>
     </div>
   );
 }
